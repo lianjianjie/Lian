@@ -18,8 +18,8 @@
 /* Begin PBXFileReference section */
 		7CB8844C1E1DF2E50022D824 /* Lian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB884501E1DF2E50022D824 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7CB884521E1DF2E50022D824 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7CB884531E1DF2E50022D824 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7CB884521E1DF2E50022D824 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		7CB884531E1DF2E50022D824 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		7CB884551E1DF2E50022D824 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7CB884561E1DF2E50022D824 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7CB884591E1DF2E50022D824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,8 +58,7 @@
 		7CB8844E1E1DF2E50022D824 /* Lian */ = {
 			isa = PBXGroup;
 			children = (
-				7CB884521E1DF2E50022D824 /* AppDelegate.h */,
-				7CB884531E1DF2E50022D824 /* AppDelegate.m */,
+				7CB884681E1DF6C00022D824 /* Classes */,
 				7CB884551E1DF2E50022D824 /* ViewController.h */,
 				7CB884561E1DF2E50022D824 /* ViewController.m */,
 				7CB884581E1DF2E50022D824 /* Main.storyboard */,
@@ -77,6 +76,55 @@
 				7CB884501E1DF2E50022D824 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CB884681E1DF6C00022D824 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7CB884691E1DF6C00022D824 /* Home */,
+				7CB8846A1E1DF6C00022D824 /* Lib */,
+				7CB8846B1E1DF6C00022D824 /* Main */,
+				7CB8846C1E1DF6C00022D824 /* Me */,
+				7CB8846D1E1DF6C00022D824 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CB884691E1DF6C00022D824 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7CB8846A1E1DF6C00022D824 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		7CB8846B1E1DF6C00022D824 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7CB884521E1DF2E50022D824 /* AppDelegate.h */,
+				7CB884531E1DF2E50022D824 /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7CB8846C1E1DF6C00022D824 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		7CB8846D1E1DF6C00022D824 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

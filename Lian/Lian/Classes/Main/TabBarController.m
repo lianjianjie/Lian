@@ -43,7 +43,7 @@
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
 #warning pch
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    selectedAttrs[NSForegroundColorAttributeName] = MRGlobalBg;
     
     UITabBarItem *item = [UITabBarItem appearance];
     

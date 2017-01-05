@@ -17,7 +17,7 @@
     UINavigationBar *navigationBar=[UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[NavigationController class]]];
     //设置背景图片
 #warning 背景待设置pch
-    navigationBar.barTintColor=[UIColor whiteColor];
+    navigationBar.barTintColor=MRGlobalBg;
     
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];

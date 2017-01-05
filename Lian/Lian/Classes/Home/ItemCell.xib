@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="ItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-GD-F1U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="vOf-aY-Q1g"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-XM-hKe">
+                        <rect key="frame" x="8" y="81" width="320" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6C-c8-Mps">
+                        <rect key="frame" x="284" y="10" width="26" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="0"/>
+                        <connections>
+                            <action selector="likeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pWw-IG-0uw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEM-rQ-c72">
+                        <rect key="frame" x="145" y="43" width="31" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="0hP-Y5-Bmh"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1ck-Ig-vMg"/>
+                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" constant="20" id="3mi-hf-8X4"/>
+                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" id="6KW-8o-N47"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="9mM-sj-yRc"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HZi-c7-cAO"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="MaA-hQ-s5O"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="N8o-hx-8gN"/>
+                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="SRV-Se-1bV"/>
+                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="csk-YX-Da7"/>
+                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" id="d4m-w7-qMy"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ew3-uV-Kbj"/>
+                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="scA-dK-4kI"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="whu-dv-gd3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgImage" destination="e0x-GD-F1U" id="pvw-Xq-gvv"/>
+                <outlet property="favoriteBtn" destination="f6C-c8-Mps" id="nfd-5c-IEm"/>
+                <outlet property="placeBtn" destination="qEM-rQ-c72" id="UgG-UL-1hN"/>
+                <outlet property="titleLabel" destination="3lb-XM-hKe" id="aZ2-2a-cUJ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

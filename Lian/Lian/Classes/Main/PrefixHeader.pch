@@ -1,16 +1,18 @@
 //
 //  PrefixHeader.pch
-//  Lian
+//  MR_BSBDJ
 //
-//  Created by 廉建杰 on 2017/1/5.
-//  Copyright © 2017年 lianjianjie. All rights reserved.
+//  Created by SinObjectC on 16/5/29.
+//  Copyright © 2016年 SinObjectC. All rights reserved.
 //
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+Extension.h"
+#import "UIImage+Extension.h"
+//#import "UIBarButtonItem+MRExtension.h"
+#import "Const.h"
 
 #ifdef DEBUG    // 测试阶段
 
@@ -47,3 +49,5 @@
 #define LYBgColor MRRGBColor(240, 240, 240)
 
 #endif /* PrefixHeader_pch */
+
+

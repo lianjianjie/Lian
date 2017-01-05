@@ -11,7 +11,7 @@ CGFloat const LYTitlesViewH = 36;
 
 NSString const * LYTitlesViewURL = @"http://api.dantangapp.com/v2/channels/preset?gender=1&generation=1";;
 #warning 默认160
-CGFloat const LYHomeCellHeight = 130;
+CGFloat const LYHomeCellHeight = 160;
 
 NSString const * isLogin = @"isLogin";
 

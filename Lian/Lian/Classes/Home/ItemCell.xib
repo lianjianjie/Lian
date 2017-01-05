@@ -13,19 +13,21 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="ItemCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-GD-F1U">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-GD-F1U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="120" id="vOf-aY-Q1g"/>
+                            <constraint firstAttribute="height" constant="120" id="BhK-Ey-wN4"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-XM-hKe">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-XM-hKe">
                         <rect key="frame" x="8" y="81" width="320" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="CZB-GP-Ria"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -39,27 +41,20 @@
                             <action selector="likeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pWw-IG-0uw"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEM-rQ-c72">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEM-rQ-c72">
                         <rect key="frame" x="145" y="43" width="31" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="0hP-Y5-Bmh"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1ck-Ig-vMg"/>
-                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" constant="20" id="3mi-hf-8X4"/>
-                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" id="6KW-8o-N47"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="9mM-sj-yRc"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HZi-c7-cAO"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="MaA-hQ-s5O"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="N8o-hx-8gN"/>
-                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="SRV-Se-1bV"/>
-                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="csk-YX-Da7"/>
-                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" id="d4m-w7-qMy"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ew3-uV-Kbj"/>
-                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="scA-dK-4kI"/>
-                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="whu-dv-gd3"/>
+                    <constraint firstAttribute="bottom" secondItem="3lb-XM-hKe" secondAttribute="bottom" constant="5" id="B7U-6U-aE9"/>
+                    <constraint firstItem="3lb-XM-hKe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="OFR-wb-u5F"/>
+                    <constraint firstAttribute="trailing" secondItem="e0x-GD-F1U" secondAttribute="trailing" constant="5" id="d4U-lq-xSP"/>
+                    <constraint firstItem="3lb-XM-hKe" firstAttribute="top" secondItem="qEM-rQ-c72" secondAttribute="bottom" constant="12" id="iFf-fV-Nyt"/>
+                    <constraint firstItem="3lb-XM-hKe" firstAttribute="top" secondItem="qEM-rQ-c72" secondAttribute="bottom" constant="20" id="lPH-Vo-tqK"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lru-bg-WeG"/>
+                    <constraint firstItem="e0x-GD-F1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="xT5-Lz-AT5"/>
+                    <constraint firstAttribute="bottom" secondItem="e0x-GD-F1U" secondAttribute="bottom" id="zee-E6-hxl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

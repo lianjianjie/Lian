@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"详情";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareBtn:)];
+
     [self.view addSubview:self.webView];
     //加载数据
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.item.content_url]]];
@@ -67,6 +69,17 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [SVProgressHUD showErrorWithStatus:@"出错啦~"];
+}
+
+//分享链接
+- (void)shareBtn:(id)sender {
+    NSURL *shareUrl=[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.item.content_url]];
+    NSArray *activityItem=@[shareUrl];
+    UIActivityViewController *activityController=[[UIActivityViewController alloc]initWithActivityItems:activityItem applicationActivities:nil];
+    //设置不出现的活动项目
+        activityController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
+    [self.navigationController presentViewController:activityController animated:YES completion:nil];
+    
 }
 
 @end

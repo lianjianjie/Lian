@@ -62,7 +62,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [SVProgressHUD showSuccessWithStatus:@"加载完成!"];
+    [SVProgressHUD showSuccessWithStatus:nil];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

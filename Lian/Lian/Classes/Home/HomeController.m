@@ -49,7 +49,7 @@
     self.navigationItem.rightBarButtonItem=rightItem;
     
 }
-
+  // 请求头部标题数据
 -(void)loadTitlesViewInfo{
     __weak typeof(self)weakSelf = self;
     //网络请求地址
@@ -58,8 +58,8 @@
     [[NetWorkTool sharedNetworkTool] loadDataInfo:url parameters:nil success:^(id _Nullable responseObject){
         //将返回的数据转化为对象数组存入当前数组用于设置标题
         NSArray *dicArray=responseObject[@"data"][@"channels"];
+        //将一个字典数组转成模型数组
         weakSelf.channels=[Channels mj_objectArrayWithKeyValuesArray:dicArray];
-        
         //设置头部标题
         [self setUpTitles];
         //初始化视图内容
@@ -143,9 +143,10 @@
     contentView.bounces = NO;
     contentView.showsHorizontalScrollIndicator = NO;
     contentView.contentSize = CGSizeMake(self.channels.count * self.view.mr_width, 0);
+    //添加视图
     [self.view insertSubview:contentView belowSubview:self.titlesView];
     self.contentView = contentView;
-    
+    //调用以下函数，来自动滚动到想要的位置，此过程中设置有动画效果，停止时，触发该函数
     [self scrollViewDidEndScrollingAnimation:contentView];
 }
 

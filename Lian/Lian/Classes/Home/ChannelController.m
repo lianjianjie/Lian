@@ -43,8 +43,14 @@ static NSString * const HomeCell = @"HomeCell";
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ 初始化表格
+ */
+
 -(void)setupTable{
+    //内边距==自切，切掉的部分无法显示内容
     self.tableView.contentInset=UIEdgeInsetsMake(LYNavBarHeight+LYTitlesViewH, 0, self.tabBarController.tabBar.mr_height, 0);
+    //状态条
     self.tableView.scrollIndicatorInsets=self.tableView.contentInset;
     //给表格视图添加下拉刷新
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewInfo)];
@@ -53,13 +59,17 @@ static NSString * const HomeCell = @"HomeCell";
     self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreInfo)];
     //注册单元格
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ItemCell class]) bundle:nil] forCellReuseIdentifier:HomeCell];
+    //隐藏UITableViewCell的分隔线
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    //行高
     self.tableView.rowHeight=LYHomeCellHeight;
 
 }
-//请求数据
+//请求数据，加载单元格内容
 -(void)loadItemInfo:(NSString *)urlString withType:(NSInteger)type{
+    //内存管理
     __weak typeof(self) weakSelf=self;
+    
     [[NetWorkTool sharedNetworkTool] loadDataInfo:urlString parameters:nil success:^(id _Nullable responseObject){
         NSArray * dictArry = responseObject[@"data"][@"items"];
         NSMutableArray * items=[Item mj_objectArrayWithKeyValuesArray:dictArry];
@@ -108,7 +118,7 @@ static NSString * const HomeCell = @"HomeCell";
     return self.items.count;
 }
 
-// 返回对应的单元格视图
+// 返回对应的单元格视图，（根据分组，返回每个cell，UITableViewDataSource 方法）
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:HomeCell];
